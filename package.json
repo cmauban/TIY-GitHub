@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmauban/TIY-GitHub.git"
+  },
+  "author": "camillemauban",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmauban/TIY-GitHub/issues"
+  },
+  "homepage": "https://github.com/cmauban/TIY-GitHub#readme"
+}
