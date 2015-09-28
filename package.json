@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --bail"
+    "test": "mocha --bail",
+    "start": "browser-sync start --server --directory --files='index.html'",
+    "sass": "node-sass scss/main.scss --output css/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/cmauban/TIY-GitHub/issues"
   },
-  "homepage": "https://github.com/cmauban/TIY-GitHub#readme"
+  "homepage": "https://github.com/cmauban/TIY-GitHub#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.6",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "node-sass": "^3.3.3"
+  }
 }
