@@ -72,7 +72,7 @@ body {
       margin-left: -40px;
     }
 
-    span {
+    i {
       font-size: 13px;
       color: #A1A1A1;
     }
@@ -99,10 +99,26 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 70%;
   padding-bottom: 100%;
   border: 1px solid #000000;
-  padding-left: 5%;
+  padding-left: 2%;
   float: right;
-  // background: #C4B4DB;
+}
+
+
+nav {
+
+    button {
+      background-color: #ffffff;
+    }
+
+
+    li {
+      list-style-type: none;
+    }
+
+
+
+
 }
