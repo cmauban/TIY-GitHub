@@ -1,0 +1,22 @@
+{
+  "name": "TIY-GitHub",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cmauban/TIY-GitHub",
+  "authors": [
+    "Camille Mauban <camille.mauban@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
