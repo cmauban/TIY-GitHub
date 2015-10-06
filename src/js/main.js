@@ -7,12 +7,25 @@
 
 
 
-$('.tabs').on('click', function(event){
+$('.tab').on('click', function(event){
+    event.preventDefault(); //stop browser to take action for clicked
 
-  var active = $('#repo').attr('href');
+  var active = $(this).attr('href'); //targets active tab
 
-  $(this).addClass('active').siblings().removeClass('active').addClass('hide');
-  $('header.tabContent section:eq(1)').show().siblings().hide();
+  $(this).addClass('active').removeClass('hide').siblings().removeClass('active').addClass('hide');
 
-event.preventDefault();
+  $('#tab2').show().siblings().hide();
+
+
+  // $('header.tabContent section:eq(1)').show().siblings().hide(); //shows current tab/hides other tabs
+
+
+
 }); // END TAB LINKS
+
+
+// function tabContent () {
+//   $('#tab1').show().siblings().hide();
+//   $('#tab2').show().siblings().hide();
+//   $('#tab3').show().siblings().hide();
+// }
