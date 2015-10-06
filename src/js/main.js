@@ -9,9 +9,9 @@
 
 $('.tabs').on('click', function(event){
 
-  var active = $('#repo').attr('href');
+  // var active = $('#repo').attr('href');
 
-  $(this).addClass('active').siblings().removeClass('active').addClass('hide');
+  $('#repo').addClass('active').siblings().removeClass('active').addClass('hide');
   $('header.tabContent section:eq(1)').show().siblings().hide();
 
 event.preventDefault();
