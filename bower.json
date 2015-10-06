@@ -1,0 +1,24 @@
+{
+  "name": "TIY-GitHub",
+  "version": "0.0.2",
+  "homepage": "https://github.com/cmauban/TIY-GitHub",
+  "authors": [
+    "Camille Mauban <camille.mauban@gmail.com>"
+  ],
+  "description": "",
+  "main": "src/index.html",
+  "moduleType": [],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.10.1"
+  }
+}

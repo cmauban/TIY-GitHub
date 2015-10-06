@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>TIY GitHub profile for Octocat</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -13,58 +13,96 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
+
     <body>
-      <header>
-      </header>
       <section class= "page-content">
         <section class="user-sidebar">
           <img src="https://avatars.githubusercontent.com/u/583231?v=3">
           <section class="name-login">
-            <h3>The Octocat</h3>
-            <p>octocat</p>
+            <h3>{{name}}</h3>
+            <p>{{login}}</p>
         </section>
         <section class="details">
           <ul>
-          <li><span class="octicon octicon-organization"></span> GitHub</li>
-          <li><span class="octicon octicon-location"></span>  San Francisco</li>
-          <li><span class="octicon octicon-mail"></span>  octocat@github.com</li>
-          <li><span class="octicon octicon-link"></span>  http://www.github.com/blog</li>
-          <li><span class="octicon octicon-clock"></span>  Joined on Jan 25, 2011</li>
+          <li><i class="octicon octicon-organization"></i> {{company}}</li>
+          <li><i class="octicon octicon-location"></i>  {{location}}</li>
+          <li><i class="octicon octicon-mail"></i><a href={{email}}>{{email}}</a></li>
+          <li><i class="octicon octicon-link"></i><a href={{email}}> {{blog}}</a></li>
+          <li><i class="octicon octicon-clock"></i>  {{created_at}}</li>
         </ul>
         </section>
-        <section class="grid">
-        <section class="row-1">
-          <article class="module">
-            1.1K
-          </article>
-          <article class="module">
-            2
-          </article>
-          <article class="module">
-            6
-          </article>
+        <section class="stats">
+        <dl>
+          <dt>1.1k</dt>
+          <dd>Followers</dd>
+        </dl>
+        <dl>
+          <dt>2</dt>
+          <dd>Starred</dd>
+        </dl>
+        <dl>
+          <dt>6</dt>
+          <dd>Following</dd>
+        </dl>
         </section>
-        <section class="row-2">
-          <article class="module">
-            Followers
-          </article>
-          <article class="module">
-            Starred
-          </article>
-          <article class="module">
-            Following
-          </article>
-        </section>
-      </section>
+      </section> <!--END USER SIDE BAR-->
 
-        </section>
         <section class="main-content">
-        </section>
-      </section>
+         <nav class="tabs">
+             <i class="octicon octicon-diff-added"></i><a href="#tab1"> Contributions</a>
+             <i class="octicon octicon-repo"></i><a href="#tab2" class="active"> Repositories</a>
+             <i class="octicon octicon-rss"></i><a href="#tab3"> Public Activity</a>
+              <button class="octicon octicon-person follow">Follow</button>
+              <button class="octicon octicon-stop"></button>
+          </nav>
+
+          <header class="tabContent">
+            <section id="tab1">
+              tab1
+            </section>
+            <section id="tab2"> <!--- REPO CONTENT --->
+              <nav class="search">
+                <input type="search" id="search" placeholder="Find a repository..." />
+                <button>Search</button>
+                <ul class="links">
+                  <a href="#all">All</a>
+                  <a href="#sources">Sources</a>
+                  <a href="#forks">Forks</a>
+                  <a href="#mirrors">Mirrors</a>
+                </ul>
+              </nav>
+              <section class="repoItems">
+                <section class="one">
+                <h2>Spoon-Knife</h2>
+                <p class="description">This repo is for demo purposes</p>
+                <p class="updated">updated 4 hours ago</p>
+                </section>
+                <section class="two">
+                  <h2>Hello-World</h2>
+                  <p class="description">This repo is for demo purposes</p>
+                  <p class="updated">updated 4 hours ago</p>
+                </section>
+                <section class="three">
+                  <h2>octocat.github.io</h2>
+                  <p class="description">This repo is for demo purposes</p>
+                  <p class="updated">updated 4 hours ago</p>
+                </section>
+              </section>
 
 
 
+            </section> <!--- END REPO CONTENT --->
+            <section id="tab3">
+              tab3
+            </section>
+          </header>
+        </section> <!--END MAIN-CONTENT-->
+      </section> <!--END PAGE-CONTENT-->
 
+
+
+        <!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
+        <!-- <script src="../bower_components/lodash/lodash.js"></script> -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>

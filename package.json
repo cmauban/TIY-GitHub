@@ -1,6 +1,6 @@
 {
   "name": "package.json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/cmauban/TIY-GitHub#readme",
   "devDependencies": {
+    "bower": "^1.5.3",
     "browser-sync": "^2.9.6",
     "chai": "^3.3.0",
     "mocha": "^2.3.3",
