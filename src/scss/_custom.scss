@@ -111,14 +111,19 @@ nav {
 
     button {
       background-color: #ffffff;
+      display: inline-block;
     }
 
 
-    li {
+    ul {
       list-style-type: none;
     }
 
+    .tabContent.active {
+      display: block;
+    }
 
-
-
+    .tabContent.hide {
+      display: none;
+    }
 }

@@ -6,14 +6,13 @@
 // });
 
 
-$('ul.tabLinks').each(function() {
-  // for each set of tabs..
-  // keeping track on which tab is active
-var $active, $content, $links = $('#repo').find('a');
 
-$active.addClass('active');
+$('.tabs').on('click', function(event){
 
-// $('#repo').addClass('active');
+  var active = $('#repo').attr('href');
 
+  $(this).addClass('active').siblings().removeClass('active').addClass('hide');
+  $('header.tabContent section:eq(1)').show().siblings().hide();
 
+event.preventDefault();
 }); // END TAB LINKS
