@@ -90,10 +90,12 @@ body {
 
     dt {
       display: block;
+      color: #4078c0;
+      font-size: 15pt;
+      text-align: center;
     }
 
     dd {
-      font-weight: 400;
       display: inline-block;
     }
 }
@@ -105,7 +107,7 @@ body {
   margin-right: auto;
   width: 70%;
   padding-bottom: 100%;
-  border: 1px solid #000000;
+  // border: 1px solid #000000;
   padding-left: 2%;
   float: right;
 }
@@ -135,11 +137,13 @@ a:active {
 nav.tabs {
     margin-left: -40px;
 
-    li button {
+    li {
       background-color: #ffffff;
       display: inline-block;
       float: left;
       font-size: 10pt;
+      padding-right: 8px;
+      padding-left: 8px;
     }
 
 button.octicon-person {
@@ -153,15 +157,11 @@ button.octicon-stop {
     ul {
       list-style-type: none;
     }
-
-    .tabContent.active {
-      display: block;
-    }
-
-    .tabContent.hide {
-      display: none;
-    }
 }
+
+
+
+
 
 .search {
   padding-top: 15px;
@@ -223,6 +223,4 @@ button.octicon-stop {
     .three {
       border-bottom: 1px solid #A1A1A1;
     }
-
-
 }
