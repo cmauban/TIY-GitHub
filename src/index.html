@@ -27,50 +27,47 @@
           <ul>
           <li><i class="octicon octicon-organization"></i> {{company}}</li>
           <li><i class="octicon octicon-location"></i>  {{location}}</li>
-          <li><i class="octicon octicon-mail"></i>  {{email}}</li>
-          <li><i class="octicon octicon-link"></i>  {{blog}}</li>
+          <li><i class="octicon octicon-mail"></i><a href={{email}}>{{email}}</a></li>
+          <li><i class="octicon octicon-link"></i><a href={{email}}> {{blog}}</a></li>
           <li><i class="octicon octicon-clock"></i>  {{created_at}}</li>
         </ul>
         </section>
-        <section class="grid">
-        <section class="row-1">
-          <article class="module">
-            1.1K
-          </article>
-          <article class="module">
-            2
-          </article>
-          <article class="module">
-            6
-          </article>
+        <section class="status">
+        <dl>
+          <dt>1.1k</dt>
+          <dd>Followers</dd>
+        </dl>
+        <dl>
+          <dt>2</dt>
+          <dd>Starred</dd>
+        </dl>
+        <dl>
+          <dt>6</dt>
+          <dd>Following</dd>
+        </dl>
         </section>
-        <section class="row-2">
-          <article class="module">
-            Followers
-          </article>
-          <article class="module">
-            Starred
-          </article>
-          <article class="module">
-            Following
-          </article>
-        </section>
-      </section>
+      </section> <!--END USER SIDE BAR-->
 
-        </section>
+
         <section class="main-content">
          <nav class="tabs">
-            <button id="contributions"><i class="octicon octicon-diff-added"> Contributions</i></button>
-            <button id="repo"><i class="octicon octicon-repo"> Repositories</i></button>
-            <button id="PA"><i class="octicon octicon-rss"> Public Activity</i></button>
+           <ul class="tabLinks">
+             <li class="octicon octicon-diff-added"><a href="#tab1">Contributions</a></li>
+             <li class="octicon octicon-repo"><a href="#tab2">Repositories</a></li>
+             <li class="octicon octicon-rss"><a href="#tab3">Public Activity</a></li>
+              <button class="octicon octicon-person follow">Follow</button>
+              <button class="octicon octicon-stop"></button>
+           </ul>
           </nav>
+
           <header class="tabContent">
-            <section class="tab1">
+            <section id="tab1">
               tab1
             </section>
-            <section class="tab2"> <!--- REPO CONTENT --->
+            <section id="tab2"> <!--- REPO CONTENT --->
               <nav class="search">
-                <input type="search" id="search" placeholder="Find repo..." /><button>Search</button>
+                <input type="search" id="search" placeholder="Find a repository..." />
+                <button>Search</button>
                 <ul class="links">
                   <a href="#all">All</a>
                   <a href="#sources">Sources</a>
@@ -98,20 +95,13 @@
 
 
 
-
             </section> <!--- END REPO CONTENT --->
-            <section class="tab3">
+            <section id="tab3">
               tab3
             </section>
           </header>
-          <ul class="tabLinks">
-            <li><a href="#contributions"></a></li>
-            <li><a href="#repo"></a></li>
-            <li><a href="#PA"></a></li>
-          </ul>
-        </nav>
         </section> <!--END MAIN-CONTENT-->
-      </section>
+      </section> <!--END PAGE-CONTENT-->
 
 
 
