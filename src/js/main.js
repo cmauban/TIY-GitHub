@@ -5,6 +5,56 @@
 //
 // });
 
+// $.getJSON('#cmaubanAPI', {
+//     tags:
+//     });
+
+
+// check to see if it gets data from file
+var cmauban = $.getJSON('../api/github/users/cmauban.json', function(data){
+  console.log(arguments);
+  console.log(data.name);
+});
+
+var cmaubanAPI = '../api/github/users/cmauban.json';
+//
+// $.getJSON(cmauban, function (data){
+//   $.each(data, function() {
+//   });
+//
+// });
+
+$.ajax ({
+  url: cmaubanAPI,
+  dataType: 'json',
+  success: function (data) {
+
+    $('#name').text(data.name);
+    $('#login').text(data.login);
+    $('#email').text(data.email);
+    $('#created').text(data.created_at);
+  }
+});
+
+
+//#cmaubanAPI = profile HTML
+
+$('#cmaubanAPI').get();
+console.log($cmaubanAPI.get());
+
+// _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+// var compiled = _.template('hello {{ user }}!');
+// compiled({ 'user': 'mustache' });
+//
+//
+//
+//
+// var compiled = _.template('<template><%- value %></template>');
+// compiled({ 'value': '<script>' });
+
+
+
+
 
 
 $('.tabs').on('click', function(event){
