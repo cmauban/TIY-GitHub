@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>TIY GitHub profile for Octocat</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -13,9 +13,8 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
+
     <body>
-      <header>
-      </header>
       <section class= "page-content">
         <section class="user-sidebar">
           <img src="https://avatars.githubusercontent.com/u/583231?v=3">
@@ -32,7 +31,7 @@
           <li><i class="octicon octicon-clock"></i>  {{created_at}}</li>
         </ul>
         </section>
-        <section class="status">
+        <section class="stats">
         <dl>
           <dt>1.1k</dt>
           <dd>Followers</dd>
@@ -48,16 +47,13 @@
         </section>
       </section> <!--END USER SIDE BAR-->
 
-
         <section class="main-content">
          <nav class="tabs">
-           <ul class="tabLinks">
-             <li class="tab"><i class="octicon octicon-diff-added"></i><a href="#tab1">Contributions</a></li>
-             <li class="tab"><i class="octicon octicon-repo"></i><a href="#tab2">Repositories</a></li>
-             <li class="tab"><i class="octicon octicon-rss"></i><a href="#tab3">Public Activity</a></li>
+             <i class="octicon octicon-diff-added"></i><a href="#tab1"> Contributions</a>
+             <i class="octicon octicon-repo"></i><a href="#tab2" class="active"> Repositories</a>
+             <i class="octicon octicon-rss"></i><a href="#tab3"> Public Activity</a>
               <button class="octicon octicon-person follow">Follow</button>
               <button class="octicon octicon-stop"></button>
-           </ul>
           </nav>
 
           <header class="tabContent">
@@ -105,7 +101,8 @@
 
 
 
-
+        <!-- <script src="../bower_components/jquery/dist/jquery.js"></script> -->
+        <!-- <script src="../bower_components/lodash/lodash.js"></script> -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>

@@ -7,7 +7,7 @@
 
 
 
-$('.tab').on('click', function(event){
+$('.tabs').on('click', function(event){
     event.preventDefault(); //stop browser to take action for clicked
 
   var active = $(this).attr('href'); //targets active tab
