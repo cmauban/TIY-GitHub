@@ -17,38 +17,55 @@ var cmauban = $.getJSON('../api/github/users/cmauban.json', function(data){
 });
 
 var cmaubanAPI = '../api/github/users/cmauban.json';
-//
-// $.getJSON(cmauban, function (data){
-//   $.each(data, function() {
-//   });
-//
-// });
 
 $.ajax ({
   url: cmaubanAPI,
   dataType: 'json',
   success: function (data) {
 
-    $('#name').text(data.name);
-    $('#login').text(data.login);
+    $('.name').text(data.name);
+    $('.login').text(data.login);
     $('#email').text(data.email);
     $('#created').text(data.created_at);
   }
 });
 
 
+// function displayData (cmaubanAPI) {
+//   var template = $('#name').html();
+//   var complied_html = _.template(template)({
+//       cmaubanAPI:data
+//   });
+//   $('body').append(compiled_html);
+//
+// $(function(){
+//   displayData(cmaubanAPI.name);
+// });
+
+
+
+
+
 //#cmaubanAPI = profile HTML
 
-$('#cmaubanAPI').get();
-console.log($cmaubanAPI.get());
+// $.getJSON('#temp_cmaubanAPI', function (data){
+//
+//   $.each(data, function(value, key) {
+//
+//
+//   });
+// console.log('it worksssss');
+// });
 
+
+//
 // _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-// var compiled = _.template('hello {{ user }}!');
-// compiled({ 'user': 'mustache' });
-//
-//
-//
-//
+// var complied = _.template('hello {{name}}!');
+//  compiled({ 'name': 'camille' });
+
+
+
+
 // var compiled = _.template('<template><%- value %></template>');
 // compiled({ 'value': '<script>' });
 
