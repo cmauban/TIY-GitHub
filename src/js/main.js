@@ -5,9 +5,6 @@
 //
 // });
 
-// $.getJSON('#cmaubanAPI', {
-//     tags:
-//     });
 
 
 // check to see if it gets data from file
@@ -16,7 +13,9 @@ var cmauban = $.getJSON('../api/github/users/cmauban.json', function(data){
   console.log(data.name);
 });
 
+
 var cmaubanAPI = '../api/github/users/cmauban.json';
+
 
 $.ajax ({
   url: cmaubanAPI,
@@ -45,24 +44,9 @@ $.ajax ({
 
 
 
-
-//#cmaubanAPI = profile HTML
-
-// $.getJSON('#temp_cmaubanAPI', function (data){
-//
-//   $.each(data, function(value, key) {
-//
-//
-//   });
-// console.log('it worksssss');
-// });
-
-
-//
 // _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
 // var complied = _.template('hello {{name}}!');
 //  compiled({ 'name': 'camille' });
-
 
 
 
