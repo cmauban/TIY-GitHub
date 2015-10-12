@@ -14,7 +14,28 @@ var cmauban = $.getJSON('../api/github/users/cmauban.json', function(data){
 });
 
 
+
 var cmaubanAPI = '../api/github/users/cmauban.json';
+
+$.getJSON('../api/github/users/cmauban.json')
+// window.fetch(cmaubanAPI)
+    .then(function(data){
+
+    _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+    var profileTpl = _.template($('.details-user template').html());
+
+    // $('.details-user').append(profileTpl({
+    //   company: 'the internet',
+    //   email: 'octocat@github.com',
+    //   blog: 'http://blog.example.com',
+    //   created_at: 'today!'
+    // }));
+
+    $('.details-user').append(profileTpl(data))
+
+});
+
+
 
 
 $.ajax ({
@@ -24,10 +45,23 @@ $.ajax ({
 
     $('.name').text(data.name);
     $('.login').text(data.login);
-    $('#email').text(data.email);
-    $('#created').text(data.created_at);
+    $('li:eq(2)').text(data.email);
+    $('li:eq(4)').text(data.created_at);
+
+
   }
+
+
+
+
 });
+
+
+
+// _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+// var complied = _.template('hello {{name}}!');
+//  compiled({ 'name': 'camille' });
+
 
 
 // function displayData (cmaubanAPI) {
@@ -44,9 +78,7 @@ $.ajax ({
 
 
 
-// _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-// var complied = _.template('hello {{name}}!');
-//  compiled({ 'name': 'camille' });
+
 
 
 
