@@ -64,7 +64,7 @@ body {
 .details {
   display: block;
   border-bottom: 1px solid #A1A1A1;
-  line-height: .2px;
+  // line-height: .2px;
 
     li {
       color: #000000;
@@ -146,6 +146,10 @@ a:active {
   font-family: arial;
 }
 
+
+.tabs a[href].about {
+  display: none;
+}
 
 nav.tabs {
     padding-top: 10px;

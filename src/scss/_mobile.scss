@@ -26,9 +26,30 @@ body {
 }
 
 .user-sidebar {
+  padding: 4%;
   overflow:hidden;
   width: 100%;
   float: left;
+  display: table;
+  content: "";
+  clear: both;
+
+      img {
+        float:left;
+        width: 40%;
+      }
+
+      .name-login {
+        float: right;
+      }
+
+      .details {
+        float: right;
+        display: table;
+        content: "";
+        clear: both;
+      }
+
 }
 
 
@@ -36,6 +57,18 @@ body {
   display: none;
 }
 
+.tabs a[href].pa {
+  display: none;
+}
+
+.search {
+  display: none;
+}
+
+button.follow {
+  width: 100%;
+  display: block;
+}
 
 
 
