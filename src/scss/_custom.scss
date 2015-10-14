@@ -14,13 +14,14 @@ body {
 }
 
 .user-sidebar {
+  box-sizing: border-box;
   display: block;
   margin: auto;
   width: 25%;
   padding-bottom: 20%;
   float: left;
   border-bottom: 1px solid #A1A1A1;
-  background: #F2F2F2;
+  outline: 1px solid #000000;
 
       img {
         border-radius: 8px;
@@ -80,34 +81,39 @@ body {
 
 
 .stats {
-  // padding-left: -40px;
   margin-top: 15px;
   text-align: center;
-  // display: inline-block;
+  float: left;
+  box-sizing: border-box;
+  display: table;
+  content: "";
+  clear: both;
 
     dl {
       text-align: center;
       display: inline-block;
+      width: 33.333%;
+      line-height: 1;
     }
 
     dt {
       display: block;
       color: #4078c0;
-      font-size: 15pt;
+      font-size: 16pt;
       text-align: center;
+      font-weight: bold;
     }
 
     dd {
       display: inline-block;
+      margin: 0;
+      font-size: 8pt;
     }
 }
 
-.stats::before {
-  display: table;
-  content: "";
-}
 
 .main-content {
+  box-sizing: border-box;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -144,7 +150,7 @@ a:active {
 nav.tabs {
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #A1A1A1;
 
     a[href] { //TAB LINKS/LINE LOCATION
       display: inline-block;
@@ -155,7 +161,7 @@ nav.tabs {
 
 
       &.active {
-      border: 1px solid gray;
+      border: 1px solid #A1A1A1;
       border-bottom-color: white;
     }
   }
