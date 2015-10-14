@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TIY GitHub profile for Octocat</title>
+        <title>TIY GitHub profile</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -16,8 +16,12 @@
 
     <body>
       <section class= "page-content">
-        <section class="user-sidebar">
-          <img src="https://avatars.githubusercontent.com/u/583231?v=3">
+        <nav class="tabs mobile-only">
+          <a href="#panel-about" class="col-1-2 active">About</a>
+          <a href="#panel-repo" class="col-1-2">Repositories</a>
+        </nav>
+        <aside class="user-sidebar" id="panel-about">
+          <a href="#"><img src="https://avatars.githubusercontent.com/u/583231?v=3"></a>
           <section class="name-login">
             <h3 class="name">{{name}}</h3>
             <p class="login">{{login}}</p>
@@ -49,13 +53,14 @@
           <dd>Following</dd>
         </dl>
         </section>
-      </section> <!--END USER SIDE BAR-->
+      </aside> <!--END USER SIDE BAR-->
 
         <section class="main-content">
          <nav class="tabs">
-             <i class="octicon octicon-diff-added"></i><a href="#panel-contri" class=""> Contributions</a>
-             <i class="octicon octicon-repo"></i><a href="#panel-repo" class="active"> Repositories</a>
-             <i class="octicon octicon-rss"></i><a href="#panel-pa" class=""> Public Activity</a>
+             <a href="#panel-contri" class="contri"><i class="octicon octicon-diff-added"></i> Contributions</a>
+             <a href="#panel-about" class="about"> About</a>
+             <a href="#panel-repo" class="repo active"><i class="octicon octicon-repo"></i> Repositories</a>
+             <a href="#panel-pa" class="pa"><i class="octicon octicon-rss"></i> Public Activity</a>
             <div class="leftButtons">
               <button class="octicon octicon-person follow">Follow</button>
               <button class="octicon octicon-stop"></button>
