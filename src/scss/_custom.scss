@@ -111,6 +111,13 @@ body {
     }
 }
 
+.mobile-only {
+  display: none;
+
+    @media screen and (max-width: 568px){
+      display: inherit
+    }
+}
 
 .main-content {
   box-sizing: border-box;
@@ -118,10 +125,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  // padding-bottom: 100%;
-  // border: 1px solid #000000;
   outline: 1px solid #000000;
-  padding-left: 2%;
+  // padding-left: 2%;
   float: right;
 }
 
@@ -211,7 +216,6 @@ button.octicon-stop {
   width: 100%;
 
     #search {
-      padding-top: 3%;
       display: inline-block;
       padding-bottom: 1%;
       float: left;

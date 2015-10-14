@@ -9,21 +9,20 @@ body {
   width: 100%;
 }
 
-.tabs {
-  box-sizing: border-box;
-  width: 100%;
-  display: table;
-  content: "";
-  clear: both;
 
-      a.active {
-        color: #000000;
-        border-top: 2px solid #d26911;
-        border-right: 1px solid #ddd;
-        border-bottom-color: #ffffff;
-      }
 
+.col-1-2 {
+  // width:
 }
+
+// .tabs {
+//   box-sizing: border-box;
+//   width: 100%;
+//   display: table;
+//   content: "";
+//   clear: both;
+
+// }
 
 .user-sidebar {
   padding: 4%;
@@ -40,11 +39,13 @@ body {
       }
 
       .name-login {
-        float: right;
+        float: left;
+        border-bottom: none;
       }
 
       .details {
-        float: right;
+        float: left;
+        border-bottom: none;
         display: table;
         content: "";
         clear: both;
@@ -53,11 +54,39 @@ body {
 }
 
 
-.tabs a[href].contri {
+nav.tabs.mobile-only {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+
+    a[href] { //TAB LINKS/LINE LOCATION
+      display: inline-block;
+      position: relative;
+      bottom: -10px;
+      font-size: 15pt;
+      padding: 3%  8% 2% 8%;
+      background: #fafafa;
+      color: #4078c0;
+      font-weight: bold;
+      border-right: 1px solid #ddd;
+      border-top: 1px solid #ddd;;
+
+      &.active {
+        color: #000000;
+        border-top: 2px solid #d26911;
+        border-right: 1px solid #ddd;
+        border-bottom-color: #ffffff;
+        background: #ffffff;
+    }
+  }
+}
+
+
+.tabs a[href].contri { //HIDES CONTRI TAB
   display: none;
 }
 
-.tabs a[href].pa {
+.tabs a[href].pa { //HIDES PA TAB
   display: none;
 }
 
