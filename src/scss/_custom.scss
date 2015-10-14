@@ -5,6 +5,7 @@ body {
 }
 
 .page-content {
+  box-sizing: border-box;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -13,13 +14,14 @@ body {
 }
 
 .user-sidebar {
+  box-sizing: border-box;
   display: block;
   margin: auto;
   width: 25%;
   padding-bottom: 20%;
   float: left;
   border-bottom: 1px solid #A1A1A1;
-  background: #F2F2F2;
+  outline: 1px solid #000000;
 
       img {
         border-radius: 8px;
@@ -69,8 +71,6 @@ body {
       font-size: 10pt;
       list-style-type: none;
       line-height: 15px;
-      padding-left: -40px;
-      margin-left: -40px;
     }
 
     i {
@@ -81,41 +81,46 @@ body {
 
 
 .stats {
-  // padding-left: -40px;
   margin-top: 15px;
   text-align: center;
-  // display: inline-block;
+  float: left;
+  box-sizing: border-box;
+  display: table;
+  content: "";
+  clear: both;
 
     dl {
       text-align: center;
       display: inline-block;
+      width: 33.333%;
+      line-height: 1;
     }
 
     dt {
       display: block;
       color: #4078c0;
-      font-size: 15pt;
+      font-size: 16pt;
       text-align: center;
+      font-weight: bold;
     }
 
     dd {
       display: inline-block;
+      margin: 0;
+      font-size: 8pt;
     }
 }
 
-.stats::before {
-  display: table;
-  content: "";
-}
 
 .main-content {
+  box-sizing: border-box;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  padding-bottom: 100%;
+  // padding-bottom: 100%;
   // border: 1px solid #000000;
-  background: #F2F2F2;
+  outline: 1px solid #000000;
   padding-left: 2%;
   float: right;
 }
@@ -143,23 +148,20 @@ a:active {
 
 
 nav.tabs {
-    // margin-left: -40px;
-    // padding: 0 3em;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #A1A1A1;
 
-    a[href] {
+    a[href] { //TAB LINKS/LINE LOCATION
       display: inline-block;
       position: relative;
-      bottom: -1px;
-      padding-right: 8px;
-      padding-left: 8px;
+      bottom: -11px;
       font-size: 10pt;
+      padding: 2%  2% 1% 2%;
 
 
       &.active {
-      border: 1px solid gray;
+      border: 1px solid #A1A1A1;
       border-bottom-color: white;
     }
   }
@@ -172,9 +174,19 @@ nav.tabs {
 
     }
 
+.leftButtons {
+  display: inline-block;
+  float: right;
+  content: "";
+  clear: both;
+}
+
 button.octicon-person {
     display: inline-block;
     float: right;
+    padding: 2px 10px;
+    border-radius: 3px;
+    color: #ffffff;
     background: #60b044; }
 button.octicon-stop {
     float: right; }
@@ -192,6 +204,7 @@ button.octicon-stop {
 .search {
   padding-top: 15px;
   display: inline-block;
+  width: 100%;
 
     #search {
       padding-top: 3%;
@@ -205,9 +218,11 @@ button.octicon-stop {
       text-align: center;
     }
 
-    .links {
+    nav.links {
       float: right;
       display: inline-block;
+      content: "";
+      clear: both;
     }
 }
 

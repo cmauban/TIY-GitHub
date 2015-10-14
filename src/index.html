@@ -25,13 +25,13 @@
 
         <section class="details">
           <ul="details-user">
-            <template>
+            <!-- <template> -->
           <li class="octicon octicon-organization">{{company}}</li><br>
           <li class="octicon octicon-location">{{location}}</li><br>
           <li class="octicon octicon-mail"><a href={{email}}>{{email}}</a></li><br>
           <li class="octicon octicon-link"><a href={{blog}}>{{blog}}</a></li><br>
           <li class="octicon octicon-clock">{{created_at}}</li>
-        </template>
+        <!-- </template> -->
         </ul>
         </section>
 
@@ -53,9 +53,9 @@
 
         <section class="main-content">
          <nav class="tabs">
-             <i class="octicon octicon-diff-added"></i><a href="#" class="icons-contri"> Contributions</a>
-             <i class="octicon octicon-repo"></i><a href="#panel-repo" class="icon-repo"> Repositories</a>
-             <i class="octicon octicon-rss"></i><a href="#" class="icon-pa"> Public Activity</a>
+             <i class="octicon octicon-diff-added"></i><a href="#panel-contri" class=""> Contributions</a>
+             <i class="octicon octicon-repo"></i><a href="#panel-repo" class="active"> Repositories</a>
+             <i class="octicon octicon-rss"></i><a href="#panel-pa" class=""> Public Activity</a>
             <div class="leftButtons">
               <button class="octicon octicon-person follow">Follow</button>
               <button class="octicon octicon-stop"></button>
@@ -63,10 +63,9 @@
           </nav>
 
           <div class="tabContent">
-            <section id="panel-contri"> <!--CONTRIBUTIONS-CONTENT-->
-              tab1
+            <section id="panel-contri" class="panel"> <!--CONTRIBUTIONS-CONTENT-->
             </section> <!--END CONTRIBUTIONS-CONTENT-->
-            <section class="panel active" id="panel-repo"> <!--- REPO CONTENT --->
+            <section id="panel-repo" class="panel active" > <!--- REPO CONTENT --->
               <section class="search">
                 <div class="left">
                   <input type="search" id="search" placeholder="Find a repository..." />
@@ -98,8 +97,7 @@
               </section>
 
             </section> <!--- END REPO CONTENT --->
-            <section id="panel-pa"> <!--PUBLIC ACTIVITY-CONTENT-->
-              tab3
+            <section id="panel-pa" class="panel"> <!--PUBLIC ACTIVITY-CONTENT-->
             </section> <!--END PUBLIC ACTIVITY-CONTENT-->
           </div>
         </section> <!--END MAIN-CONTENT-->
