@@ -64,7 +64,7 @@ body {
 .details {
   display: block;
   border-bottom: 1px solid #A1A1A1;
-  line-height: .2px;
+  // line-height: .2px;
 
     li {
       color: #000000;
@@ -111,6 +111,13 @@ body {
     }
 }
 
+.mobile-only {
+  display: none;
+
+    @media screen and (max-width: 568px){
+      display: inherit
+    }
+}
 
 .main-content {
   box-sizing: border-box;
@@ -118,10 +125,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  // padding-bottom: 100%;
-  // border: 1px solid #000000;
   outline: 1px solid #000000;
-  padding-left: 2%;
+  // padding-left: 2%;
   float: right;
 }
 
@@ -146,6 +151,10 @@ a:active {
   font-family: arial;
 }
 
+
+.tabs a[href].about {
+  display: none;
+}
 
 nav.tabs {
     padding-top: 10px;
@@ -207,7 +216,6 @@ button.octicon-stop {
   width: 100%;
 
     #search {
-      padding-top: 3%;
       display: inline-block;
       padding-bottom: 1%;
       float: left;
