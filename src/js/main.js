@@ -88,27 +88,20 @@ $.ajax ({
 
 
 
+$('.tabs').each(function(){ //iterates through each ahref
+  $('.tabContent').each(function(){ //iterates through the corresponding content
 
-
-$('.tabs').on('click', function(event){
+  $('a').on('click', function(event){
     event.preventDefault(); //stop browser to take action for clicked
 
-  var active = $(this).attr('href'); //targets active tab
+    $(this).addClass('active').siblings().removeClass('active'); //current href clicked is active
 
-  $(this).addClass('active').removeClass('hide').siblings().removeClass('active').addClass('hide');
+    var active = $(this).attr('href'); //targets active tab and grabs that href
 
-  $('#tab2').show().siblings().hide();
-
-
-  // $('header.tabContent section:eq(1)').show().siblings().hide(); //shows current tab/hides other tabs
+    $(active).addClass('active').siblings().removeClass('active'); //activates the corresponding content
 
 
 
-}); // END TAB LINKS
-
-
-// function tabContent () {
-//   $('#tab1').show().siblings().hide();
-//   $('#tab2').show().siblings().hide();
-//   $('#tab3').show().siblings().hide();
-// }
+    });
+  });
+});
