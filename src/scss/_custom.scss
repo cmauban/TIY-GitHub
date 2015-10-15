@@ -37,7 +37,6 @@ body {
   display: block;
   margin: auto;
   width: 25%;
-  // padding-bottom: 20%;
   float: left;
   border-bottom: 1px solid #ddd;
   // outline: 1px solid #000000;
@@ -47,7 +46,7 @@ body {
         margin-right: auto;
         margin-left: auto;
         width: 99%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
       }
 
 } //END USER-SIDEBAR ICON
@@ -58,7 +57,7 @@ body {
   text-align: left;
   line-height: 1px;
   display: block;
-  margin-bottom: 10px;
+  padding-bottom: 7%;
   border-bottom: 1px solid #ddd;
   // border: 1px solid #000000;
 
@@ -67,14 +66,11 @@ body {
           color: #000000;
           font-family: Arial, sans-serif;
           font-style: bold;
-          margin-top: 10px;
         }
 
         p {
           font-size: 13pt;
-          color: #000000;
-          margin-bottom: 10px;
-          padding-bottom: 8%;
+          color: #A1A1A1;
         }
 
 } //END NAME-LOGIN
@@ -83,7 +79,8 @@ body {
 .details {
   display: block;
   border-bottom: 1px solid #ddd;
-  // line-height: .2px;
+  padding-top: 7%;
+  padding-bottom: 7%;
 
     li {
       color: #000000;
@@ -100,7 +97,8 @@ body {
 
 
 .stats {
-  margin-top: 15px;
+  padding-top: 7%;
+  padding-bottom: 7%;
   text-align: center;
   float: left;
   box-sizing: border-box;
@@ -214,6 +212,7 @@ nav.tabs {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
 
     a[href] { //TAB LINKS/LINE LOCATION
       display: inline-block;
@@ -243,6 +242,7 @@ nav.tabs {
   float: right;
   content: "";
   clear: both;
+  margin-top: 3%;
 }
 
 button.octicon-person {
@@ -260,37 +260,41 @@ button.octicon-stop {
       list-style-type: none;
     }
 }
+    .left {
+        display: inline;
+        padding-top: 15px;
 
 
 
+        .search {
+          display: inline-block;
+          width: 100%;
+          margin-top: 15px;
+          margin-bottom: 15px;
 
+            #search {
+              display: inline;
+              // padding-bottom: 1%;
+              float: left;
+            }
 
-.search {
-  padding-top: 15px;
-  display: inline-block;
-  width: 100%;
-
-    #search {
-      display: inline-block;
-      padding-bottom: 1%;
-      float: left;
+            button {
+              display: inline-block;
+              text-align: center;
+            }
     }
-
-    button {
-      display: inline-block;
-      text-align: center;
-    }
-
+}
     nav.links {
       float: right;
       display: inline-block;
-      content: "";
-      clear: both;
     }
-}
+
+
+
 
 
 .repoItems {
+  margin-top: 15px;
   display: block;
   border-top: 1px solid #ddd;
 
