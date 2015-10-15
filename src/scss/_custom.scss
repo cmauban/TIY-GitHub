@@ -37,10 +37,10 @@ body {
   display: block;
   margin: auto;
   width: 25%;
-  padding-bottom: 20%;
+  // padding-bottom: 20%;
   float: left;
-  border-bottom: 1px solid #A1A1A1;
-  outline: 1px solid #000000;
+  border-bottom: 1px solid #ddd;
+  // outline: 1px solid #000000;
 
       img {
         border-radius: 8px;
@@ -59,7 +59,7 @@ body {
   line-height: 1px;
   display: block;
   margin-bottom: 10px;
-  border-bottom: 1px solid #A1A1A1;
+  border-bottom: 1px solid #ddd;
   // border: 1px solid #000000;
 
         h3 {
@@ -82,7 +82,7 @@ body {
 
 .details {
   display: block;
-  border-bottom: 1px solid #A1A1A1;
+  border-bottom: 1px solid #ddd;
   // line-height: .2px;
 
     li {
@@ -139,20 +139,36 @@ body {
     }
 }
 
-@media screen and (max-width: 568px){
+@media screen and (max-width: 568px){ //MOBILE
     .page-content {
       margin: 2%;
       width: auto;
     }
 
-    .main-content {
-      margin-left: 0 !important;
-      width: 100% !important;
+    .name-login {
+      margin-left: 3%;
+    }
+
+    .details {
 
     }
 
-    .repoItems {
-      width: 100%;
+    .main-content {
+      margin-left: 0 !important;
+      width: 100% !important;
+    }
+
+    .leftButtons {
+      width: 90%;
+      position: absolute;
+      top: 400px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+
+        button.octicon-person {
+          padding: 9px 15px !important;
+        }
     }
 
 }
@@ -163,7 +179,7 @@ body {
   margin-left: 2%;
   margin-right: auto;
   width: 72%;
-  outline: 1px solid #000000;
+  // outline: 1px solid #000000;
   // padding-left: 2%;
   float: left;
 }
@@ -197,7 +213,7 @@ a:active {
 nav.tabs {
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #A1A1A1;
+    border-bottom: 1px solid #ddd;
 
     a[href] { //TAB LINKS/LINE LOCATION
       display: inline-block;
@@ -208,7 +224,8 @@ nav.tabs {
 
 
       &.active {
-      border: 1px solid #A1A1A1;
+      border: 1px solid #ddd;
+      border-bottom: 3px solid #ffffff;
       border-bottom-color: white;
     }
   }
@@ -275,7 +292,7 @@ button.octicon-stop {
 
 .repoItems {
   display: block;
-  border-top: 1px solid #A1A1A1;
+  border-top: 1px solid #ddd;
 
 
     h2 {
@@ -300,14 +317,14 @@ button.octicon-stop {
     }
 
     .one {
-      border-bottom: 1px solid #A1A1A1;
+      border-bottom: 1px solid #ddd;
     }
 
     .two {
-      border-bottom: 1px solid #A1A1A1;
+      border-bottom: 1px solid #ddd;
     }
 
     .three {
-      border-bottom: 1px solid #A1A1A1;
+      border-bottom: 1px solid #ddd;
     }
 }
