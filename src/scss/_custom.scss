@@ -11,6 +11,25 @@ body {
   margin-right: auto;
   width: 80%;
   margin-bottom: 5px;
+  display: table;
+  content: "";
+  clear: both;
+
+}
+
+
+@media screen and (max-width: 1024px){
+
+  .page-content {
+    margin: 2.5%;
+    width: auto;
+    }
+
+  .main-content {
+    width: 50%;
+    float: left;
+    margin-left: 1%;
+  }
 }
 
 .user-sidebar {
@@ -115,19 +134,38 @@ body {
   display: none;
 
     @media screen and (max-width: 568px){
-      display: inherit
+      display: inherit;
+      width: 100%;
     }
+}
+
+@media screen and (max-width: 568px){
+    .page-content {
+      margin: 2%;
+      width: auto;
+    }
+
+    .main-content {
+      margin-left: 0 !important;
+      width: 100% !important;
+
+    }
+
+    .repoItems {
+      width: 100%;
+    }
+
 }
 
 .main-content {
   box-sizing: border-box;
   display: block;
-  margin-left: auto;
+  margin-left: 2%;
   margin-right: auto;
-  width: 70%;
+  width: 72%;
   outline: 1px solid #000000;
   // padding-left: 2%;
-  float: right;
+  float: left;
 }
 
 a:link { //TAB LINKS

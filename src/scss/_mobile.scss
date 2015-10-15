@@ -4,10 +4,6 @@ body {
   padding: 0;
 }
 
-.main-content {
-  margin: 0 auto;
-  width: 100%;
-}
 
 
 
@@ -87,6 +83,10 @@ nav.tabs.mobile-only {
 }
 
 .tabs a[href].pa { //HIDES PA TAB
+  display: none;
+}
+
+.tabs a[href].repo { //HIDES PA TAB
   display: none;
 }
 
