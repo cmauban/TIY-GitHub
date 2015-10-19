@@ -31,7 +31,7 @@ $.getJSON('../api/github/users/cmauban.json')
     //   created_at: 'today!'
     // }));
 
-    $('.details-user').append(profileTpl(data))
+    $('.details-user').append(profileTpl(data));
 
 });
 
