@@ -18,7 +18,7 @@ body {
 }
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px){ //TABLET
 
   .page-container {
     margin: 2.5%;
@@ -179,8 +179,6 @@ body {
   margin-left: 2%;
   margin-right: auto;
   width: 72%;
-  // outline: 1px solid #000000;
-  // padding-left: 2%;
   float: left;
 }
 
@@ -262,9 +260,12 @@ button.octicon-stop {
       list-style-type: none;
     }
 }
-    .left {
-        display: inline;
-        padding-top: 15px;
+
+
+
+.left {
+    display: inline;
+    padding-top: 15px;
 
 
 

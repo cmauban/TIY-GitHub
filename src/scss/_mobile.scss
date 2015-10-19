@@ -4,7 +4,6 @@ body {
   padding: 0;
 }
 
-
 .user-sidebar {
   padding: 4%;
   overflow:hidden;
@@ -25,7 +24,6 @@ body {
       }
 
       .details {
-        // float: left;
         border-bottom: none;
         display: inline-block;
         content: "";
@@ -93,7 +91,9 @@ button.follow {
   display: block;
 }
 
-
+.stats {
+  width: 100%;
+}
 
 
 
