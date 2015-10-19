@@ -36,7 +36,7 @@ body {
   box-sizing: border-box;
   display: block;
   margin: auto;
-  width: 25%;
+  width: 23%;
   float: left;
   border-bottom: 1px solid #ddd;
   // outline: 1px solid #000000;
@@ -68,7 +68,8 @@ body {
         }
 
         p {
-          font-size: 13pt;
+          font-size: 15pt;
+          font-weight: lighter;
           color: #A1A1A1;
         }
 
@@ -178,7 +179,7 @@ body {
   display: block;
   margin-left: 2%;
   margin-right: auto;
-  width: 72%;
+  width: 74%;
   float: left;
 }
 
@@ -351,5 +352,20 @@ button.octicon-stop {
 
     .three {
       border-bottom: 1px solid #ddd;
+    }
+}
+
+.panel {
+  display: none;
+
+    &.active {
+      display: inherit;
+
+      &::after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+
     }
 }
