@@ -25,7 +25,7 @@
           <a href="#panel-repo" class="col-1-2">Repositories</a>
         </nav>
         <aside class="user-sidebar" id="panel-about">
-          <a href="#"><img src="https://avatars.githubusercontent.com/u/583231?v=3"></a>
+          <a href="#"><img ng-src="{{user.avatar_url}}"></a>
           <section class="name-login">
             <h3 class="name">{{user.name}}</h3>
             <p class="login">{{user.login}}</p>
@@ -89,19 +89,19 @@
               </section>
               <section class="repoItems">
                 <article class="one">
-                <h2>Spoon-Knife</h2>
-                <p class="description">This repo is for demo purposes</p>
-                <p class="updated">updated 4 hours ago</p>
+                <a href="{{repo[0].repos_url}}"><h2>{{repo[0].name}}</h2></a>
+                <p class="description">{{repo[0].description}}</p>
+                <p class="updated">Updated {{repo[0].updated_at}} hours ago</p>
               </article>
                 <article class="two">
-                  <h2>Hello-World</h2>
-                  <p class="description">This repo is for demo purposes</p>
-                  <p class="updated">updated 4 hours ago</p>
+                  <a href="{{repo[1].repos_url}}"><h2>{{repo[1].name}}</h2></a>
+                  <p class="description">{{repo[1].description}}</p>
+                  <p class="updated">Updated {{repo[1].updated_at}} hours ago</p>
                 </article>
                 <article class="three">
-                  <h2>octocat.github.io</h2>
-                  <p class="description">This repo is for demo purposes</p>
-                  <p class="updated">updated 4 hours ago</p>
+                  <a href="{{repo[2].repos_url}}"><h2>{{repo[2].name}}</h2></a>
+                  <p class="description">{{repo[2].description}}</p>
+                  <p class="updated">Updated {{repo[2].updated_at}} hours ago</p>
                 </article>
               </section>
 

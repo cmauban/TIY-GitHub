@@ -314,18 +314,23 @@ button.octicon-stop {
   display: block;
   border-top: 1px solid #ddd;
 
+    a[href] {
+        &:hover {
+        text-decoration: underline;
+        color: #4078c0;
+      }
 
-    h2 {
-      font-size: 16pt;
-      color: #4078c0;
-      line-height: 10pt;
-      padding-top: 3%;
-    }
-
+        h2 {
+          font-size: 16pt;
+          color: #4078c0;
+          line-height: 10pt;
+          padding-top: 3%;
+        }
+}
     .description {
       color: #666;
-      font-size: 12pt;
-      line-height: 10pt;
+      font-size: 11pt;
+      line-height: 13pt;
 
     }
 
