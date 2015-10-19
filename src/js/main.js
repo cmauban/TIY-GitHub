@@ -10,8 +10,11 @@
 
 
 //TABS
+$('.tabs').each(function(){ //iterates through each ahref
+  $('.tabContent').each(function(){ //iterates through the corresponding content
 
-  $('.tabs > a').on('click', function(event){
+
+  $('a').on('click', function(event){
     event.preventDefault(); //stop browser to take action for clicked
 
     var active = $(this).attr('href'); //targets active tab and grabs that href
@@ -26,6 +29,8 @@
       .trigger('click');
 // }); // END document.ready
 // }) (jQuery.noConflict())
+  });
+});
 
 
 ;(function(){ //IIFE
