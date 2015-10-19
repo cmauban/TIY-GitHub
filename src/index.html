@@ -88,22 +88,12 @@
                 </nav>
               </section>
               <section class="repoItems">
-                <article class="one">
-                <a href="{{repo[0].repos_url}}"><h2>{{repo[0].name}}</h2></a>
-                <p class="description">{{repo[0].description}}</p>
-                <p class="updated">Updated {{repo[0].updated_at}} hours ago</p>
+                <article class="one" ng-repeat="repo in repos | orderBy: '-updated_at'">
+                <a href="{{repo.html_url}}"><h2>{{repo.name}}</h2></a>
+                <p class="description">{{repo.description}}</p>
+                <p class="updated">Updated {{repo.updated_at}} hours ago</p>
               </article>
-                <article class="two">
-                  <a href="{{repo[1].repos_url}}"><h2>{{repo[1].name}}</h2></a>
-                  <p class="description">{{repo[1].description}}</p>
-                  <p class="updated">Updated {{repo[1].updated_at}} hours ago</p>
-                </article>
-                <article class="three">
-                  <a href="{{repo[2].repos_url}}"><h2>{{repo[2].name}}</h2></a>
-                  <p class="description">{{repo[2].description}}</p>
-                  <p class="updated">Updated {{repo[2].updated_at}} hours ago</p>
-                </article>
-              </section>
+            </section> <!--- END REPOITEMS --->
 
             </section> <!--- END REPO CONTENT --->
             <section id="panel-pa" class="panel"> <!--PUBLIC ACTIVITY-CONTENT-->

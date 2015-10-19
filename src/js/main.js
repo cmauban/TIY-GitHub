@@ -52,7 +52,8 @@ $('.tabs').each(function(){ //iterates through each ahref
 
       $http.get('../api/github/users/cmauban/repositories.json')
         .then(function(response){
-          $rootScope.repo = response.data;
+          $rootScope.repos = response.data;
+          console.log(response.data);
         });
     });
 })(); // END IIFE
