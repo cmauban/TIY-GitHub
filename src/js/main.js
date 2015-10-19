@@ -1,9 +1,74 @@
-//will give back a promise. //GETs content of one file
+// will give back a promise. //GETs content of one file
 // jQuery.ajax('../api/github/users/octocat.json').then(function(data){
 //
 //   console.log(arguments);
 //
 // });
+
+
+
+
+
+//TABS
+$('.tabs').each(function(){ //iterates through each ahref
+  $('.tabContent').each(function(){ //iterates through the corresponding content
+
+
+  $('a').on('click', function(event){
+    event.preventDefault(); //stop browser to take action for clicked
+
+    var active = $(this).attr('href'); //targets active tab and grabs that href
+
+    $(this).add(active) // if use this, remove both each functions
+      .addClass('active')
+    .siblings()
+      .removeClass('active');
+
+
+    }).filter('[href="#panel-repo"]')
+      .trigger('click');
+// }); // END document.ready
+// }) (jQuery.noConflict())
+  });
+});
+
+
+;(function(){ //IIFE
+  var app = angular.module('TIY-GitHub', [ ]);
+    // .controller('GenerticController', function($http, $scope){
+    app.run(function($http, $rootScope) {
+
+      $http.get('../api/github/users/cmauban.json')
+        .then(function(response){
+          $rootScope.user = response.data;
+
+          console.log(arguments);
+        });
+
+
+    });
+
+    app.run(function($http, $rootScope) {
+
+      $http.get('../api/github/users/cmauban/repositories.json')
+        .then(function(response){
+          $rootScope.repos = response.data;
+          console.log(response.data);
+        });
+    });
+})(); // END IIFE
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24,45 +89,30 @@ $.getJSON('../api/github/users/cmauban.json')
     _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
     var profileTpl = _.template($('.details-user template').html());
 
-    // $('.details-user').append(profileTpl({
-    //   company: 'the internet',
-    //   email: 'octocat@github.com',
-    //   blog: 'http://blog.example.com',
-    //   created_at: 'today!'
-    // }));
-
-    $('.details-user').append(profileTpl(data))
+    $('.details-user').append(profileTpl(data));
 
 });
 
 
 
 
-$.ajax ({
-  url: cmaubanAPI,
-  dataType: 'json',
-  success: function (data) {
-
-    $('.name').text(data.name);
-    $('.login').text(data.login);
-    $('li:eq(2)').text(data.email);
-    $('li:eq(4)').text(data.created_at);
-
-
-  }
-
-
-
-
-});
-
-
+// $.ajax ({
+//   url: cmaubanAPI,
+//   dataType: 'json',
+//   success: function (data) {
+//
+//     $('.name').text(data.name);
+//     $('.login').text(data.login);
+//     $('li:eq(2)').text(data.email);
+//     $('li:eq(4)').text(data.created_at);
+//
+//   }
+//
+// });
 
 // _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
 // var complied = _.template('hello {{name}}!');
 //  compiled({ 'name': 'camille' });
-
-
 
 // function displayData (cmaubanAPI) {
 //   var template = $('#name').html();
@@ -75,33 +125,5 @@ $.ajax ({
 //   displayData(cmaubanAPI.name);
 // });
 
-
-
-
-
-
-
-
 // var compiled = _.template('<template><%- value %></template>');
 // compiled({ 'value': '<script>' });
-
-
-
-
-$('.tabs').each(function(){ //iterates through each ahref
-  $('.tabContent').each(function(){ //iterates through the corresponding content
-
-  $('a').on('click', function(event){
-    event.preventDefault(); //stop browser to take action for clicked
-
-    $(this).addClass('active').siblings().removeClass('active'); //current href clicked is active
-
-    var active = $(this).attr('href'); //targets active tab and grabs that href
-
-    $(active).addClass('active').siblings().removeClass('active'); //activates the corresponding content
-
-
-
-    });
-  });
-});

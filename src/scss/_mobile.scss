@@ -4,26 +4,6 @@ body {
   padding: 0;
 }
 
-.main-content {
-  margin: 0 auto;
-  width: 100%;
-}
-
-
-
-.col-1-2 {
-  // width:
-}
-
-// .tabs {
-//   box-sizing: border-box;
-//   width: 100%;
-//   display: table;
-//   content: "";
-//   clear: both;
-
-// }
-
 .user-sidebar {
   padding: 4%;
   overflow:hidden;
@@ -44,9 +24,8 @@ body {
       }
 
       .details {
-        float: left;
         border-bottom: none;
-        display: table;
+        display: inline-block;
         content: "";
         clear: both;
       }
@@ -58,6 +37,7 @@ nav.tabs.mobile-only {
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
+
 
     a[href] { //TAB LINKS/LINE LOCATION
       display: inline-block;
@@ -90,6 +70,18 @@ nav.tabs.mobile-only {
   display: none;
 }
 
+.tabs a[href].repo { //HIDES PA TAB
+  display: none;
+}
+
+button.octicon-stop {
+  display: none;
+}
+
+li.octicon-clock {
+  display: none;
+}
+
 .search {
   display: none;
 }
@@ -99,7 +91,9 @@ button.follow {
   display: block;
 }
 
-
+.stats {
+  width: 100%;
+}
 
 
 

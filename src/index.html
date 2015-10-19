@@ -8,48 +8,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <!--bower: css-->
+        <!--add bower normalize-->
+        <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+        <!--end bower-->
         <link rel="stylesheet" href="octicons/octicons.css">
-        <link rel="stylesheet" href="css/normalize.css">
+
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
 
     <body>
-      <section class= "page-content">
+      <main class= "page-container" ng-app="TIY-GitHub">
         <nav class="tabs mobile-only">
           <a href="#panel-about" class="col-1-2 active">About</a>
           <a href="#panel-repo" class="col-1-2">Repositories</a>
         </nav>
         <aside class="user-sidebar" id="panel-about">
-          <a href="#"><img src="https://avatars.githubusercontent.com/u/583231?v=3"></a>
+          <a href="#"><img ng-src="{{user.avatar_url}}"></a>
           <section class="name-login">
-            <h3 class="name">{{name}}</h3>
-            <p class="login">{{login}}</p>
+            <h3 class="name">{{user.name}}</h3>
+            <p class="login">{{user.login}}</p>
         </section>
 
         <section class="details">
           <ul="details-user">
             <!-- <template> -->
-          <li class="octicon octicon-organization">{{company}}</li><br>
-          <li class="octicon octicon-location">{{location}}</li><br>
-          <li class="octicon octicon-mail"><a href={{email}}>{{email}}</a></li><br>
-          <li class="octicon octicon-link"><a href={{blog}}>{{blog}}</a></li><br>
-          <li class="octicon octicon-clock">{{created_at}}</li>
+          <li class="octicon octicon-organization"> {{user.company}}</li><br>
+          <li class="octicon octicon-location"> {{user.location}}</li><br>
+          <li class="octicon octicon-mail"><a href="{{user.email}}"> {{user.email}}</a></li><br>
+          <li class="octicon octicon-link"><a href={{blog}}> {{user.blog}}</a></li><br>
+          <li class="octicon octicon-clock"> {{user.created_at}}</li>
         <!-- </template> -->
         </ul>
         </section>
-
         <section class="stats">
         <dl>
-          <dt>1.1k</dt>
+          <dt>{{user.followers}}</dt>
           <dd>Followers</dd>
         </dl>
         <dl>
-          <dt>2</dt>
+          <dt>{{user.starred}}</dt>
           <dd>Starred</dd>
         </dl>
         <dl>
-          <dt>6</dt>
+          <dt>{{user.following}}</dt>
           <dd>Following</dd>
         </dl>
         </section>
@@ -69,6 +72,7 @@
 
           <div class="tabContent">
             <section id="panel-contri" class="panel"> <!--CONTRIBUTIONS-CONTENT-->
+            <h2>contributions</h2>
             </section> <!--END CONTRIBUTIONS-CONTENT-->
             <section id="panel-repo" class="panel active" > <!--- REPO CONTENT --->
               <section class="search">
@@ -78,42 +82,33 @@
               </div>
                 <nav class="links">
                   <a href="#" class="active">All</a>
-                  <a href="#">Sources</a>
-                  <a href="#">Forks</a>
-                  <a href="#">Mirrors</a>
+                  <a href="#" class="">Sources</a>
+                  <a href="#" class="">Forks</a>
+                  <a href="#" class="">Mirrors</a>
                 </nav>
               </section>
               <section class="repoItems">
-                <article class="one">
-                <h2>Spoon-Knife</h2>
-                <p class="description">This repo is for demo purposes</p>
-                <p class="updated">updated 4 hours ago</p>
+                <article class="one" ng-repeat="repo in repos | orderBy: '-updated_at'">
+                <a href="{{repo.html_url}}"><h2>{{repo.name}}</h2></a>
+                <p class="description">{{repo.description}}</p>
+                <p class="updated">Updated {{repo.updated_at}} hours ago</p>
               </article>
-                <article class="two">
-                  <h2>Hello-World</h2>
-                  <p class="description">This repo is for demo purposes</p>
-                  <p class="updated">updated 4 hours ago</p>
-                </article>
-                <article class="three">
-                  <h2>octocat.github.io</h2>
-                  <p class="description">This repo is for demo purposes</p>
-                  <p class="updated">updated 4 hours ago</p>
-                </article>
-              </section>
+            </section> <!--- END REPOITEMS --->
 
             </section> <!--- END REPO CONTENT --->
             <section id="panel-pa" class="panel"> <!--PUBLIC ACTIVITY-CONTENT-->
+            <h2>public activity</h2>
             </section> <!--END PUBLIC ACTIVITY-CONTENT-->
           </div>
         </section> <!--END MAIN-CONTENT-->
-      </section> <!--END PAGE-CONTENT-->
-
+      </main> <!--END PAGE-CONTENT-->
 
 
 
 
 
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/lodash/lodash.js"></script>
         <!-- CDN LINK <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
         <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
