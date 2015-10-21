@@ -62,7 +62,13 @@ $('.tabs').each(function(){ //iterates through each ahref
         });
     });
 
+    app.run(function($http, $rootScope) {
 
+      $http.get('../api/github/users/cmauban/comments.json')
+        .then(function(response){
+          $rootScope.comments = response.data;
+        });
+    });
 
 
 })(); // END IIFE
