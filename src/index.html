@@ -112,7 +112,7 @@
               <img src="{{user.avatar_url}}">
                 <article class="comment-box">
                   <header>
-                    <strong>{{user.login}}</strong> commented 2 hours ago
+                    <strong>{{user.login}}</strong> commented <time datetime="{{comment.updated_at}}" is="relative-time" title="{{created_at}}"> hours ago</time>
                   <span class="fa times"></span>
                   </header>
                   <div class="comment">{{comment.body}}</div>
