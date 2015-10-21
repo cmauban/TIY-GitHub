@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/comments/149988713",
+    "html_url": "https://github.com/TIY-Durham/2015-FALL-FEE/issues/503#issuecomment-149988713",
+    "issue_url": "https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503",
+    "id": 149988713,
+    "user": {
+      "login": "cmauban",
+      "id": 14016133,
+      "avatar_url": "https://avatars.githubusercontent.com/u/14016133?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cmauban",
+      "html_url": "https://github.com/cmauban",
+      "followers_url": "https://api.github.com/users/cmauban/followers",
+      "following_url": "https://api.github.com/users/cmauban/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cmauban/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cmauban/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cmauban/subscriptions",
+      "organizations_url": "https://api.github.com/users/cmauban/orgs",
+      "repos_url": "https://api.github.com/users/cmauban/repos",
+      "events_url": "https://api.github.com/users/cmauban/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cmauban/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "created_at": "2015-10-21T18:39:19Z",
+    "updated_at": "2015-10-21T18:39:19Z",
+    "body": "### Journal, Week 7: Any Way You Want It\r\n\r\nWelcome to Wednesday! Tomorrow your bookmark and reflective entries are due. Get each peer reviewed by two people and peer review two more.\r\n\r\n### Reading APIs: Github Issues & Firebase Auth\r\n\r\nPlease answer any of the questions from Monday that you didn't get to and additionally refresh your memory (and notes) on how authentication works with the Github API by answering these questions:\r\n\r\n  * What credentials do I need to authenticate with the Github API?\r\n  * How can I provide authentication credentials to Github?\r\n\r\n[Firebase](http://firebase.io) is a DataBase as a Service (DBaaS) tool that can act as a ReSTful API for our Angular JS front-end applications. It also has a free hosting tier for client-only applications like ours and a JavaScript authentication library to make integrating with OAuth providers -- like Google, Facebook, and GitHub -- _much easier_. We don't need the API parts _yet_, but read up on [Authentication with Firebase](https://www.firebase.com/docs/web/guide/user-auth.html), specifically [authenticating with GitHub](https://www.firebase.com/docs/web/guide/login/github.html).\r\n\r\n  * How can I use Firebase to authenticate with GitHub?\r\n  * What type of information will Firebase require from me to integrate with GitHub?\r\n  * What credentials will Firebase provide me when I have successfully authenticated?\r\n  * How and where do I need to use those credentials?\r\n\r\n### Don't Stop Believing... Continued.\r\n\r\nFinish up the three features you identified for ` USERNAME.github.io`. Be sure you're using `feature/*` branches with PRs into `remodeling` and open a PR from `remodeling` into `master`.\r\n\r\n### GitHub Revolution: Angular Edition\r\n\r\nTonight, we need to learn about submitting forms with Angular and fetching from and _pushing to_ a _real_ API. At the bottom of your GitHub profile page, create placeholder templates for comments and a comment form like we see on every GitHub Issue. When the page loads, fetch all the comments for your _WIP Issue_ from the GitHub API and display them in the comment template. When someone submits the comment form, add that comment to your _WIP Issue_ via the API _and_ display it in the list of comments. It should look and work _exactly_ like the comment form on your _WIP Issue_! Hmm...\r\n\r\n#### BEAST MODE\r\n\r\nIf you haven't figured it out yet, you're going to need to authenticate in order to create those comments. A simple solution would be to ask the user for credentials right in the comment form, but do you really want to ask for their username and password every time? Should you _ever_ ask for someone's password? Use Firebase Auth to authenticate with GitHub instead, and use the credentials you get to send the API request.\r\n\r\n#### NIGHTMARE MODE\r\n\r\nHave you ever noticed that GitHub seems to _update itself_? When I post a new comment on an Issue, it _automatically_ appears on everyone else's screen, as long as they're still connected to the internet. How did they do that? Can you find out where in the API this activity is published?\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/comments/149990216",
+    "html_url": "https://github.com/TIY-Durham/2015-FALL-FEE/issues/503#issuecomment-149990216",
+    "issue_url": "https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503",
+    "id": 149990216,
+    "user": {
+      "login": "cmauban",
+      "id": 14016133,
+      "avatar_url": "https://avatars.githubusercontent.com/u/14016133?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cmauban",
+      "html_url": "https://github.com/cmauban",
+      "followers_url": "https://api.github.com/users/cmauban/followers",
+      "following_url": "https://api.github.com/users/cmauban/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cmauban/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cmauban/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cmauban/subscriptions",
+      "organizations_url": "https://api.github.com/users/cmauban/orgs",
+      "repos_url": "https://api.github.com/users/cmauban/repos",
+      "events_url": "https://api.github.com/users/cmauban/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cmauban/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "created_at": "2015-10-21T18:45:32Z",
+    "updated_at": "2015-10-21T18:45:32Z",
+    "body": "let's see some comments"
+  }
+]

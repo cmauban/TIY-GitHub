@@ -33,6 +33,11 @@ $('.tabs').each(function(){ //iterates through each ahref
 });
 
 
+
+
+
+
+
 ;(function(){ //IIFE
   var app = angular.module('TIY-GitHub', [ ]);
     // .controller('GenerticController', function($http, $scope){
@@ -56,6 +61,10 @@ $('.tabs').each(function(){ //iterates through each ahref
           console.log(response.data);
         });
     });
+
+
+
+
 })(); // END IIFE
 
 

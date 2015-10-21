@@ -11,7 +11,7 @@
         <!--bower: css-->
         <!--add bower normalize-->
         <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-        <!--end bower-->
+        <!--endbower-->
         <link rel="stylesheet" href="octicons/octicons.css">
 
         <link rel="stylesheet" href="css/main.css">
@@ -21,10 +21,10 @@
     <body>
       <main class= "page-container" ng-app="TIY-GitHub">
         <nav class="tabs mobile-only">
-          <a href="#panel-about" class="col-1-2 active">About</a>
-          <a href="#panel-repo" class="col-1-2">Repositories</a>
+          <a href="#panel-about" ng-click="tab=1" ng-init="tab=1" class="col-1-2 active">About</a>
+          <a href="#panel-repo" ng-click="tab=2" class="col-1-2">Repositories</a>
         </nav>
-        <aside class="user-sidebar" id="panel-about">
+        <aside class="user-sidebar" id="panel-about" ng-show="tab === 1">
           <a href="#"><img ng-src="{{user.avatar_url}}"></a>
           <section class="name-login">
             <h3 class="name">{{user.name}}</h3>
@@ -74,7 +74,7 @@
             <section id="panel-contri" class="panel"> <!--CONTRIBUTIONS-CONTENT-->
             <h2>contributions</h2>
             </section> <!--END CONTRIBUTIONS-CONTENT-->
-            <section id="panel-repo" class="panel active" > <!--- REPO CONTENT --->
+            <section id="panel-repo" class="panel active"> <!--- REPO CONTENT --->
               <section class="search">
                 <div class="left">
                   <input type="search" id="search" placeholder="Find a repository..." />
@@ -110,8 +110,6 @@
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/lodash/lodash.js"></script>
-        <!-- CDN LINK <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
