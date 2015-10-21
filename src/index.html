@@ -11,6 +11,7 @@
         <!--bower: css-->
         <!--add bower normalize-->
         <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" />
         <!--endbower-->
         <link rel="stylesheet" href="octicons/octicons.css">
 
@@ -101,11 +102,19 @@
             </section> <!--END PUBLIC ACTIVITY-CONTENT-->
           </div>
 
+
+
+
+
+
           <section class="comment-box-wrap"> <!--COMMENT-BOX-->
             <div class="comment-container">
-              <img src="https://avatars.githubusercontent.com/u/14016133?v=3">
+              <img src="{{user.avatar_url}}">
                 <article class="comment-box">
-                  <header><strong>cmauban</strong> commented 2 hours ago</header>
+                  <header>
+                    <strong>{{user.login}}</strong> commented 2 hours ago
+                  <span class="fa times"></span>
+                  </header>
                   <div class="comment">let's see some comments</div>
                 </article>
             </div>
@@ -113,7 +122,7 @@
 
           <section class="form"> <!--FORM COMMENT-BOX-->
             <div class="form-container">
-              <img src="https://avatars.githubusercontent.com/u/14016133?v=3">
+              <img src="{{user.avatar_url}}">
                 <form class="comment-form">
                     <header>Write</header>
                     <fieldset>

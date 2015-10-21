@@ -32,6 +32,15 @@
       padding: 1.5%;
       font-size: 10pt;
       color: #767676;
+
+      .times {
+        float: right;
+        display: inline-block;
+      }
+
+      .times::after {
+        content: "\f00d";
+      }
     }
 
     .comment {
@@ -52,6 +61,7 @@
   margin-right: auto;
   width: 100%;
   box-sizing: border-box;
+  padding-bottom: 10%;
 
     img {
       width: 6%;
@@ -78,6 +88,7 @@
       background: #f7f7f7;
       border-bottom: 1px solid #ddd;
       padding: 2%;
+      font-size: 11pt;
     }
 
     fieldset {
