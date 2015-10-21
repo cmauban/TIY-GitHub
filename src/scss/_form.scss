@@ -5,7 +5,6 @@
   margin-right: auto;
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 20%;
 
     // &:after {
     //   display: table;
@@ -23,32 +22,43 @@
 .form-container {
   margin-top: 3%;
   position: relative;
-  outline: 1px solid #000;
-  padding-bottom: 20%;
-
-    header {
-      background: #eee;
-      padding-bottom: 7%;
-    }
+  // outline: 1px solid #000;
+  border-radius: 3px 3px 0 0;
 
 }
 
 .comment-form {
   margin-left: 9%;
-  outline: 1px solid #000000;
-  padding-bottom: 20%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 
-    textarea {
-      margin: 2% 2%;
-      width: 95%;
-      padding-bottom: 10%;
+    header {
+      background: #f7f7f7;
+      border-bottom: 1px solid #ddd;
+      padding: 2%;
+    }
+
+    fieldset {
+      margin: 2%;
+
+    .input {
+      margin-bottom: 1%;
+      background: #fafafa;
+
+        textarea.comment {
+          width: 99%;
+          padding-bottom: 10%;
+          border: 1px solid gray;
+          border-radius: 3px;
+        }
+
     }
 
     .buttons {
-      padding-top: 0;
-      outline: 1px solid #000;
+      float: right;
     }
 
+}
 
 
 }
