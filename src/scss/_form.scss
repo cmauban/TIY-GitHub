@@ -1,0 +1,54 @@
+.form {
+  margin-top: 5%;
+  border-top: 2px solid #f3f3f3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 20%;
+
+    // &:after {
+    //   display: table;
+    //   content: "";
+    //   clear: both;
+    // }
+    img {
+      width: 6%;
+      float: left;
+    }
+
+}
+
+
+.form-container {
+  margin-top: 3%;
+  position: relative;
+  outline: 1px solid #000;
+  padding-bottom: 20%;
+
+    header {
+      background: #eee;
+      padding-bottom: 7%;
+    }
+
+}
+
+.comment-form {
+  margin-left: 9%;
+  outline: 1px solid #000000;
+  padding-bottom: 20%;
+
+    textarea {
+      margin: 2% 2%;
+      width: 95%;
+      padding-bottom: 10%;
+    }
+
+    .buttons {
+      padding-top: 0;
+      outline: 1px solid #000;
+    }
+
+
+
+}
