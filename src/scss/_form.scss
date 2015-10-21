@@ -1,4 +1,5 @@
 .comment-box-wrap {
+  @extend .clearfix;
   margin-top: 5%;
   border-top: 2px solid #f3f3f3;
   margin-left: auto;
@@ -22,20 +23,20 @@
 
 .comment-box {
   margin-left: 9%;
-  border: 1px solid #ddd;
+  border: 1px solid #bfccd1;
   border-radius: 3px;
 
     header {
-      background: #f7f7f7;
-      border-bottom: 1px solid #ddd;
+      background: #f2f8fa;
+      border-bottom: 1px solid #dde4e6;
       padding: 1.5%;
       font-size: 10pt;
+      color: #767676;
     }
 
     .comment {
       margin: 2%;
-      background: #fafafa;
-
+      font-size: 11pt;
     }
 
   }
@@ -44,6 +45,7 @@
 
 
 .form {
+  @extend .clearfix;
   margin-top: 5%;
   border-top: 2px solid #f3f3f3;
   margin-left: auto;
@@ -96,6 +98,19 @@
 
     .buttons {
       float: right;
+
+        .issue {
+          background: #eee;
+          border: 1px solid #d5d5d5;
+          color: #333;
+        }
+
+        .comment-button {
+          background: #60b044;
+          border: 1px solid #5ca941;
+          color: #ffffff;
+
+        }
     }
 
   }
