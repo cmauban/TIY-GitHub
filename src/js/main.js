@@ -1,14 +1,3 @@
-// will give back a promise. //GETs content of one file
-// jQuery.ajax('../api/github/users/octocat.json').then(function(data){
-//
-//   console.log(arguments);
-//
-// });
-
-
-
-
-
 //TABS
 $('.tabs').each(function(){ //iterates through each ahref
   $('.tabContent').each(function(){ //iterates through the corresponding content
@@ -31,8 +20,6 @@ $('.tabs').each(function(){ //iterates through each ahref
 // }) (jQuery.noConflict())
   });
 });
-
-
 
 
 
@@ -62,11 +49,34 @@ $('.tabs').each(function(){ //iterates through each ahref
         });
     });
 
+    //FETCHES CACHED COMMENTS FROM LOCAL COMMENTS.JSON
+    // app.run(function($http, $rootScope) {
+    //
+    //   $http.get('../api/github/users/cmauban/comments.json')
+    //     .then(function(response){
+    //       $rootScope.comments = response.data;
+    //     });
+    // });
+
+    //FETCHES COMMENTS FROM GITHUB API
     app.run(function($http, $rootScope) {
 
-      $http.get('../api/github/users/cmauban/comments.json')
+      $http.get('https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503/comments')
         .then(function(response){
           $rootScope.comments = response.data;
+
+        });
+    });
+
+    app.run(function($http, $rootScope) {
+
+      $http.post('https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503')
+        .then(function(response){
+
+          $rootScope.comment = {};
+
+          // $rootScope.comment = {};
+          // $rootScope.add = response.data;
         });
     });
 
@@ -75,9 +85,15 @@ $('.tabs').each(function(){ //iterates through each ahref
 
 
 
-
-
-
+// ;(function(){
+//   angular.module('TIY-GitHub', ['ngRoute'], function($routeProvider){
+//
+//     $routeProvider.when('/index.html', {
+//       // templateUrl:'https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503/comments'
+//     });
+//   });
+//
+// })(); // END IIFE
 
 
 

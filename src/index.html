@@ -21,6 +21,7 @@
 
     <body>
       <main class= "page-container" ng-app="TIY-GitHub">
+        <!-- <ng-view /> -->
         <nav class="tabs mobile-only">
           <a href="#panel-about" ng-click="tab=1" ng-init="tab=1" class="col-1-2 active">About</a>
           <a href="#panel-repo" ng-click="tab=2" class="col-1-2">Repositories</a>
@@ -106,13 +107,13 @@
 
 
 
-
+          <section class="comment-template" ng-submit="add(comment.body)"> <!--COMMENT-TEMPLATE-->
           <section class="comment-box-wrap" ng-repeat="comment in comments | orderBy: 'updated_at'"> <!--COMMENT-BOX-->
             <div class="comment-container">
               <img src="{{user.avatar_url}}">
                 <article class="comment-box">
                   <header>
-                    <strong>{{user.login}}</strong> commented <time datetime="{{comment.updated_at}}" is="relative-time" title="{{created_at}}"> hours ago</time>
+                    <strong>{{user.login}}</strong> commented {{comment.updated_at}} hours ago
                   <span class="fa times"></span>
                   </header>
                   <div class="comment">{{comment.body}}</div>
@@ -120,24 +121,25 @@
             </div>
           </section> <!--END COMMENT-BOX-->
 
-          <section class="form"> <!--FORM COMMENT-BOX-->
+          <section class="form" ng-submit="add(comment.body)"> <!--FORM COMMENT-BOX-->
             <div class="form-container">
               <img src="{{user.avatar_url}}">
                 <form class="comment-form">
                     <header>Write</header>
                     <fieldset>
                       <div class="input">
-                       <textarea class="write" name="comment" placeholder="Leave a comment"></textarea>
+                       <textarea  ng-model="comment.body" class="write" name="comment" placeholder="Leave a comment" value="{{comment.body}}"></textarea>
                     </div>
                     <footer class="buttons">
-                      <button class="issue">Close Issue</button>
-                      <button class="comment-button">Comment</button>
+                      <button type="submit" class="issue">Close Issue</button>
+                      <input class="comment-button" type="submit" value="comment"></input>
                     </footer>
                 </fieldset>
                 </form>
           </div>
+            <pre>{{comment}}</pre>
         </section> <!--END FORM SECTION-->
-
+      </section> <!--END .COMMENT-TEMPLATE-->
 
         </section> <!--END MAIN-CONTENT-->
 
@@ -146,12 +148,12 @@
       </main> <!--END PAGE-CONTENT-->
 
 
-
-
-
+        <!--bower:js-->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
         <script src="../bower_components/lodash/lodash.js"></script>
+        <!--endbower-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
