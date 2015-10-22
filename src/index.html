@@ -20,7 +20,7 @@
     </head>
 
     <body>
-      <main class= "page-container" ng-app="TIY-GitHub">
+      <main class= "page-container" ng-app="TIY-GitHub" ng-inclue="page">
         <!-- <ng-view /> -->
         <nav class="tabs mobile-only">
           <a href="#panel-about" ng-click="tab=1" ng-init="tab=1" class="col-1-2 active">About</a>
@@ -107,7 +107,7 @@
 
 
 
-          <section class="comment-template" ng-submit="add(comment.body)"> <!--COMMENT-TEMPLATE-->
+          <section class="comment-template" ng-submit="add()"> <!--COMMENT-TEMPLATE-->
           <section class="comment-box-wrap" ng-repeat="comment in comments | orderBy: 'updated_at'"> <!--COMMENT-BOX-->
             <div class="comment-container">
               <img src="{{user.avatar_url}}">
@@ -121,7 +121,7 @@
             </div>
           </section> <!--END COMMENT-BOX-->
 
-          <section class="form" ng-submit="add(comment.body)"> <!--FORM COMMENT-BOX-->
+          <section class="form" ng-submit="add()"> <!--FORM COMMENT-BOX-->
             <div class="form-container">
               <img src="{{user.avatar_url}}">
                 <form class="comment-form">

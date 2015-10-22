@@ -26,7 +26,7 @@ $('.tabs').each(function(){ //iterates through each ahref
 
 
 ;(function(){ //IIFE
-  var app = angular.module('TIY-GitHub', [ ]);
+  var app = angular.module('TIY-GitHub', [ 'ngRoute' ]);
     // .controller('GenerticController', function($http, $scope){
     app.run(function($http, $rootScope) {
 
@@ -68,17 +68,28 @@ $('.tabs').each(function(){ //iterates through each ahref
         });
     });
 
-    app.run(function($http, $rootScope) {
 
-      $http.post('https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503')
-        .then(function(response){
+    app.run(function($http, $rootScope, $location) {
 
+      // $http.post('/api/github/users/cmauban/comments.json')
+      //   .then(function(response){
           $rootScope.comment = {};
 
-          // $rootScope.comment = {};
-          // $rootScope.add = response.data;
+          $rootScope.add = function(){
+            $http({
+              method: 'POST',
+              url: '/repos/TIY-Durham/2015-FALL-FEE/issues/503'
+              // data: $.param({body: "key"}),
+              // headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+
+            });
+            $rootScope.page = '.' + $location.path() + '.html';
+
+          };
+          console.log($location.path() + 'html');
         });
-    });
+    // });
 
 
 })(); // END IIFE
