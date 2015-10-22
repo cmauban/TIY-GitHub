@@ -1,14 +1,3 @@
-// will give back a promise. //GETs content of one file
-// jQuery.ajax('../api/github/users/octocat.json').then(function(data){
-//
-//   console.log(arguments);
-//
-// });
-
-
-
-
-
 //TABS
 $('.tabs').each(function(){ //iterates through each ahref
   $('.tabContent').each(function(){ //iterates through the corresponding content
@@ -33,8 +22,11 @@ $('.tabs').each(function(){ //iterates through each ahref
 });
 
 
+
+
+
 ;(function(){ //IIFE
-  var app = angular.module('TIY-GitHub', [ ]);
+  var app = angular.module('TIY-GitHub', [ 'ngRoute' ]);
     // .controller('GenerticController', function($http, $scope){
     app.run(function($http, $rootScope) {
 
@@ -56,13 +48,63 @@ $('.tabs').each(function(){ //iterates through each ahref
           console.log(response.data);
         });
     });
+
+    //FETCHES CACHED COMMENTS FROM LOCAL COMMENTS.JSON
+    // app.run(function($http, $rootScope) {
+    //
+    //   $http.get('../api/github/users/cmauban/comments.json')
+    //     .then(function(response){
+    //       $rootScope.comments = response.data;
+    //     });
+    // });
+
+    //FETCHES COMMENTS FROM GITHUB API
+    app.run(function($http, $rootScope) {
+
+      $http.get('https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503/comments')
+        .then(function(response){
+          $rootScope.comments = response.data;
+
+        });
+    });
+
+
+    app.run(function($http, $rootScope, $location) {
+
+      // $http.post('/api/github/users/cmauban/comments.json')
+      //   .then(function(response){
+          $rootScope.comment = {};
+
+          $rootScope.add = function(){
+            $http({
+              method: 'POST',
+              url: '/repos/TIY-Durham/2015-FALL-FEE/issues/503'
+              // data: $.param({body: "key"}),
+              // headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+
+
+            });
+            $rootScope.page = '.' + $location.path() + '.html';
+
+          };
+          console.log($location.path() + 'html');
+        });
+    // });
+
+
 })(); // END IIFE
 
 
 
-
-
-
+// ;(function(){
+//   angular.module('TIY-GitHub', ['ngRoute'], function($routeProvider){
+//
+//     $routeProvider.when('/index.html', {
+//       // templateUrl:'https://api.github.com/repos/TIY-Durham/2015-FALL-FEE/issues/503/comments'
+//     });
+//   });
+//
+// })(); // END IIFE
 
 
 

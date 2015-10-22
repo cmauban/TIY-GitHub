@@ -11,7 +11,8 @@
         <!--bower: css-->
         <!--add bower normalize-->
         <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-        <!--end bower-->
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" />
+        <!--endbower-->
         <link rel="stylesheet" href="octicons/octicons.css">
 
         <link rel="stylesheet" href="css/main.css">
@@ -19,12 +20,13 @@
     </head>
 
     <body>
-      <main class= "page-container" ng-app="TIY-GitHub">
+      <main class= "page-container" ng-app="TIY-GitHub" ng-inclue="page">
+        <!-- <ng-view /> -->
         <nav class="tabs mobile-only">
-          <a href="#panel-about" class="col-1-2 active">About</a>
-          <a href="#panel-repo" class="col-1-2">Repositories</a>
+          <a href="#panel-about" ng-click="tab=1" ng-init="tab=1" class="col-1-2 active">About</a>
+          <a href="#panel-repo" ng-click="tab=2" class="col-1-2">Repositories</a>
         </nav>
-        <aside class="user-sidebar" id="panel-about">
+        <aside class="user-sidebar" id="panel-about" ng-show="tab === 1">
           <a href="#"><img ng-src="{{user.avatar_url}}"></a>
           <section class="name-login">
             <h3 class="name">{{user.name}}</h3>
@@ -74,7 +76,7 @@
             <section id="panel-contri" class="panel"> <!--CONTRIBUTIONS-CONTENT-->
             <h2>contributions</h2>
             </section> <!--END CONTRIBUTIONS-CONTENT-->
-            <section id="panel-repo" class="panel active" > <!--- REPO CONTENT --->
+            <section id="panel-repo" class="panel active"> <!--- REPO CONTENT --->
               <section class="search">
                 <div class="left">
                   <input type="search" id="search" placeholder="Find a repository..." />
@@ -100,18 +102,58 @@
             <h2>public activity</h2>
             </section> <!--END PUBLIC ACTIVITY-CONTENT-->
           </div>
+
+
+
+
+
+          <section class="comment-template" ng-submit="add()"> <!--COMMENT-TEMPLATE-->
+          <section class="comment-box-wrap" ng-repeat="comment in comments | orderBy: 'updated_at'"> <!--COMMENT-BOX-->
+            <div class="comment-container">
+              <img src="{{user.avatar_url}}">
+                <article class="comment-box">
+                  <header>
+                    <strong>{{user.login}}</strong> commented {{comment.updated_at}} hours ago
+                  <span class="fa times"></span>
+                  </header>
+                  <div class="comment">{{comment.body}}</div>
+                </article>
+            </div>
+          </section> <!--END COMMENT-BOX-->
+
+          <section class="form" ng-submit="add()"> <!--FORM COMMENT-BOX-->
+            <div class="form-container">
+              <img src="{{user.avatar_url}}">
+                <form class="comment-form">
+                    <header>Write</header>
+                    <fieldset>
+                      <div class="input">
+                       <textarea  ng-model="comment.body" class="write" name="comment" placeholder="Leave a comment" value="{{comment.body}}"></textarea>
+                    </div>
+                    <footer class="buttons">
+                      <button type="submit" class="issue">Close Issue</button>
+                      <input class="comment-button" type="submit" value="comment"></input>
+                    </footer>
+                </fieldset>
+                </form>
+          </div>
+            <pre>{{comment}}</pre>
+        </section> <!--END FORM SECTION-->
+      </section> <!--END .COMMENT-TEMPLATE-->
+
         </section> <!--END MAIN-CONTENT-->
+
+
+
       </main> <!--END PAGE-CONTENT-->
 
 
-
-
-
+        <!--bower:js-->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
         <script src="../bower_components/lodash/lodash.js"></script>
-        <!-- CDN LINK <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <!--endbower-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --bail",
-    "start": "browser-sync start --server --directory --files='src/index.html'",
-    "sass": "node-sass --output-style expanded --output src/css/ src/scss/main.scss"
+    "start": "browser-sync start --server --directory --startPath src/index.html --files='src/index.html'",
+    "sass": "node-sass --output-style expanded --output src/css/ src/scss/main.scss",
+    "install:bower": "bower install --save",
+    "postinstall:bower": "wiredep --src 'src/*.html'",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",
@@ -19,10 +22,11 @@
   },
   "homepage": "https://github.com/cmauban/TIY-GitHub#readme",
   "devDependencies": {
-    "bower": "^1.5.3",
+    "bower": "^1.6.3",
     "browser-sync": "^2.9.6",
     "chai": "^3.3.0",
     "mocha": "^2.3.3",
-    "node-sass": "^3.3.3"
+    "node-sass": "^3.3.3",
+    "wiredep": "^2.2.2"
   }
 }
